@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="home.html"><img src="logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="About.html">ABOUT US</a></li>
+                    <li><a href="Course.html">COURSE</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Contact.html">CONTACT US</a></li>
+                    <li><a href="Login_signup.html">LOGIN & SIGNUP</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            
+        </nav></section>
+    <title>Login or Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- You may need to adjust the path to your CSS file -->
+    <style>
+        /* Additional CSS styles for the login and sign-up page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .cancelbtn {
+            background-color: #f44336;
+        }
+        .cancelbtn,
+        .psw {
+            float: right;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Login or Sign Up</h2>
+
+<!-- Login Form -->
+<form action="login.php" method="post">
+    <div class="container" id="loginForm">
+        <h3>Login</h3>
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+
+        <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="#">Forgot Password?</a></span>
+        </div>
+        <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+    </div>
+</form>
+
+<!-- Sign Up Form -->
+<form action="signup.php" method="post">
+    <div class="container" id="signupForm" style="display: none;">
+        <h3>Sign Up</h3>
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Sign Up</button>
+
+        <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+        </div>
+        <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+    </div>
+</form>
+
+<script>
+    function toggleForm() {
+        var loginForm = document.getElementById("loginForm");
+        var signupForm = document.getElementById("signupForm");
+
+        if (loginForm.style.display === "block") {
+            loginForm.style.display = "none";
+            signupForm.style.display = "block";
+        } else {
+            loginForm.style.display = "block";
+            signupForm.style.display = "none";
+        }
+    }
+</script>
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>At our college, we are dedicated to providing our students with the knowledge, skills, and experience they need to succeed in today's ever-changing world. <br> We offer a comprehensive range of academic programs, along with a supportive and inclusive learning environment that fosters intellectual curiosity, critical thinking, and personal growth.
+    </p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made<i class="fa fa-heart-o"></i> By Shivranjan Jogwar</p>
+</section>
+
+</body>
+</html>

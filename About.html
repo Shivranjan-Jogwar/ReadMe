@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="home.html"><img src="logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="About.html">ABOUT US</a></li>
+                    <li><a href="Course.html">COURSE</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Contact.html">CONTACT US</a></li>
+                    <li><a href="Login_signup.html">LOGIN & SIGNUP</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            
+        </nav>
+        <h1>About Us</h1>
+    </section>
+<!--------about us content------->
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+<h1>We are the worlds Largest University</h1>
+<p>At our college, we are proud to be recognized as the world's largest university, with a global reach and a commitment to excellence in education. With a student body spanning multiple continents and cultures, we offer a truly international academic experience.
+
+Our size and scale allow us to offer a wide range of academic programs and resources, ensuring that every student can find a course of study that matches their interests and career aspirations. Our faculty members are experts in their fields, and they are dedicated to providing our students with a challenging and rewarding academic experience.
+
+Despite our size, we are committed to maintaining a supportive and inclusive learning environment that fosters intellectual curiosity, critical thinking, and personal growth. We believe that education is the key to unlocking human potential, and we are proud to offer our students the resources and support they need to succeed.
+
+As the world's largest university, we are uniquely positioned to make a positive impact on the world, and we are committed to using our resources and expertise to address the challenges facing our global community. Whether you are a prospective student, a current student, or an alumnus, we invite you to join us in our mission to change the world through education.
+<br><br><br><br>
+<a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+        </div>
+<div class="about-col">
+<img src="about.jpg">
+</div>
+    </div>
+</section>
+<!--------Footer------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>At our college, we are dedicated to providing our students with the knowledge, skills, and experience they need to succeed in today's ever-changing world. <br> We offer a comprehensive range of academic programs, along with a supportive and inclusive learning environment that fosters intellectual curiosity, critical thinking, and personal growth.
+    </p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made<i class="fa fa-heart-o"></i> By Shivranjan Jogwar</p>
+</section>
+<!--------JavaScript for Toggle Menu------->
+    <script>
+        var navLinks= document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+    </script>
+</body>
+</html>

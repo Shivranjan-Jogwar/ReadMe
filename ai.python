@@ -1,0 +1,21 @@
+import openai
+
+openai.api_key = "your_api_key_here"
+
+def chatbot(prompt):
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=prompt,
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    ).choices[0].text
+    return response
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == "exit":
+        break
+    bot_response = chatbot(user_input)
+    print(f"Bot: {bot_response}")
